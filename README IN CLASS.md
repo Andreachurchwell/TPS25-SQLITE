@@ -568,5 +568,39 @@ In our next class, we will go over your homework questions, do a short recap and
 Homework:
 
 1. Why is it ideal to use multiple tables instead of one giant table in a relational database?
-2. Write a SQL query that counts the number of people in the demographics table for each zipcode who are under 30. 
+
+Using several smaller, connected tables (instead of one huge table) is a good idea because:
+
+✅ It avoids repeating the same info over and over — like having the same program name listed 100 times. You just store it once and connect it where needed.
+
+✅ It keeps things more accurate. If something changes (like the name of a program), you only have to update it in one spot.
+
+✅ It’s faster and easier to search through. Smaller tables are less messy and quicker to work with.
+
+✅ It makes the database easier to grow. If you need to add more info later, it won’t mess everything up.
+
+
+2. Write a SQL query that counts the number of people in the demographics table for each zipcode who are under 30.
+
+SELECT plu.program_name, COUNT(*) AS referral_count
+FROM programming p
+JOIN programmingLU plu ON p.program_id = plu.program_id
+GROUP BY plu.program_name;
+✅ This query:
+
+Filters people under 30.
+Groups them by zipcode.
+Counts how many are in each group.
+
+
 3. You want to know how many people were referred to each program in the database. Referral information is stored in the programming table.Program names are stored in the programmingLU table. Write a SQL query that shows the program name and the number of people referred to each one.
+
+SELECT plu.program_name, COUNT(*) AS referral_count
+FROM programming p
+JOIN programmingLU plu ON p.program_id = plu.program_id
+GROUP BY plu.program_name;
+
+
+Joins the two tables on program_id.
+Groups by program_name.
+Counts how many times each program was referred.

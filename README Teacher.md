@@ -137,7 +137,7 @@ This lesson walks students through how to explore a simplified database using ba
 ## What to Type in your terminal to get started 
 
 Hit enter after each one. 
-
+<!-- ###super important commands!! -->
 1. `sqlite3 JTCsql.db` 
 2. `.tables` 
 3. `.headers on`  

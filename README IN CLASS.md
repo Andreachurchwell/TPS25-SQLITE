@@ -567,6 +567,7 @@ In our next class, we will go over your homework questions, do a short recap and
 --- 
 Homework:
 
+
 1. Why is it ideal to use multiple tables instead of one giant table in a relational database?
 
 Using several smaller, connected tables (instead of one huge table) is a good idea because:

@@ -595,13 +595,3 @@ Counts how many are in each group.
 
 
 3. You want to know how many people were referred to each program in the database. Referral information is stored in the programming table.Program names are stored in the programmingLU table. Write a SQL query that shows the program name and the number of people referred to each one.
-
-SELECT plu.program_name, COUNT(*) AS referral_count
-FROM programming p
-JOIN programmingLU plu ON p.program_id = plu.program_id
-GROUP BY plu.program_name;
-
-
-Joins the two tables on program_id.
-Groups by program_name.
-Counts how many times each program was referred.
